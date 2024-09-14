@@ -8,3 +8,7 @@
 
 ## Install requirements
 `pip3 install -r requirements.txt`
+
+## alembic commands
+`alembic revision --autogenerate -m "message"`
+`alembic upgrade head`
