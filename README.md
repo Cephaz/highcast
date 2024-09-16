@@ -12,3 +12,6 @@
 ## alembic commands
 `alembic revision --autogenerate -m "message"`
 `alembic upgrade head`
+
+## pytest
+`pytest tests/`
