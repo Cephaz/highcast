@@ -1,5 +1,5 @@
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from datetime import datetime, timedelta
 
 class EnergyConsumptionBase(BaseModel):
@@ -17,8 +17,7 @@ class EnergyConsumption(EnergyConsumptionBase):
     updated_at: datetime
     created_at: datetime
 
-    class Config:
-        from_attributes = True
+    ConfigDict(from_attributes=True)
 
 class ExportParams(BaseModel):
     start_date: datetime = Field(default=datetime.now() - timedelta(days=7))

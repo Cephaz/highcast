@@ -1,9 +1,6 @@
-from sqlalchemy import Column, Integer, Float, Date, DateTime, String, UniqueConstraint
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, Float, DateTime, String, UniqueConstraint
 from sqlalchemy.sql import func
-from .database import engine
-
-Base = declarative_base()
+from .database import Base, engine
 
 class EnergyConsumption(Base):
     __tablename__ = "energy_consumption"
